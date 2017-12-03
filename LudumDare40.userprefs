@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraControl.cs">
+    <Files>
+      <File FileName="Assets\Scripts\World\Tiles\Implemented\Conduit.cs" Line="33" Column="1" />
+      <File FileName="Assets\Scripts\World\Tiles\Implemented\EmptyTile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\World\Tiles\Implemented\HeatLaser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\World\Tiles\Implemented\Miner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\World\Tiles\Implemented\PowerPlant.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\World\TiledMap.cs" Line="114" Column="22" />
+      <File FileName="Assets\Scripts\World\MapData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Selector.cs" Line="15" Column="2" />
+      <File FileName="Assets\Scripts\Cursor.cs" Line="33" Column="1" />
+      <File FileName="Assets\Scripts\PowerHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\World\StructureObject.cs" Line="35" Column="19" />
+      <File FileName="Assets\Scripts\Alerter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="23" Column="42" />
+      <File FileName="Assets\Scripts\PollutionHandler.cs" Line="24" Column="60" />
+      <File FileName="Assets\Scripts\CameraControl.cs" Line="17" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
