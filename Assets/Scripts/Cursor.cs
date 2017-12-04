@@ -13,6 +13,7 @@ public class Cursor : MonoBehaviour {
 	public Text conduitMoneyText;
 	public Text minerMoneyText;
 	public Text heatLaserMoneyText;
+	public Text surgerMoneyText;
 	public GameManager game;
 
 	public Structure structureToPlace;
@@ -27,6 +28,7 @@ public class Cursor : MonoBehaviour {
 		conduitMoneyText.text = "$" + (new Conduit ()).price;
 		minerMoneyText.text = "$" + (new Miner ()).price;
 		heatLaserMoneyText.text = "$" + (new HeatLaser ()).price;
+		surgerMoneyText.text = "$" + (new Surger ()).price;
 	}
 
 	void Update() {
@@ -54,6 +56,9 @@ public class Cursor : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 			AddHeatLaserToPlace();
+
+		if (Input.GetKeyDown (KeyCode.Alpha4))
+			AddSurgerToPlace ();
 
 	}
 
@@ -97,6 +102,8 @@ public class Cursor : MonoBehaviour {
 				structureToPlace = new Miner ();
 			} else if (structureToPlace is HeatLaser) {
 				structureToPlace = new HeatLaser ();
+			} else if (structureToPlace is Surger) {
+				structureToPlace = new Surger ();
 			} else {
 				Debug.LogWarning ("COULD NOT RECOGNIZE TYPE " + structureToPlace);
 				structureToPlace = null;
@@ -116,5 +123,9 @@ public class Cursor : MonoBehaviour {
 
 	public void AddHeatLaserToPlace() {
 		structureToPlace = new HeatLaser();
+	}
+
+	public void AddSurgerToPlace() {
+		structureToPlace = new Surger();
 	}
 }

@@ -15,7 +15,7 @@ public class Conduit : Structure, PowerCarrier, Purchasable, Destructable, Updat
 		}
 	}
 
-	public int price { get { return 10;}}
+	public int price { get { return 100;}}
 
 	private float hp = 100f;
 	public float maxHealth { get { return 100f; } }

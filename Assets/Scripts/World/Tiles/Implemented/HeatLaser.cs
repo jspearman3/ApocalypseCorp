@@ -8,7 +8,7 @@ public class HeatLaser : ChargableStructure, Purchasable, Destructable, Updateab
 	public static GameObject LaserPrefab = Resources.Load<GameObject>("Prefabs/Laser");
 	public override Sprite sprite { get { return HeatLaser.Sprite;}}
 
-	public int price { get { return 30;}}
+	public int price { get { return 500;}}
 	private float hp = 100f;
 	public float maxHealth { get { return 100f; } }
 	public override float maxPower { get { return 100f; } }

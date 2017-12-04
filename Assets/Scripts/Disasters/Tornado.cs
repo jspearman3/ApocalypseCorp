@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tornado : MonoBehaviour {
-	public float intensity = 1;
+	public float baseIntensity = 1;
 	public float spinSpeed = 1;
 	public float damageMultiplier = 1;
 	public float decayMultiplier = 1;
 	public float minIntensity = 1;
+	public float pollutionModifier = 1;
+	public float intensity;
+	public float minFactor =1;
+	public float maxFactor = 1;
+
+	public PollutionHandler pollutionHandler;
 
 	public Vector2 velocity;
 
@@ -19,7 +25,10 @@ public class Tornado : MonoBehaviour {
 	void Start () {
 		trans = GetComponent<Transform> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
+		pollutionHandler = PollutionHandler.getInstance ();
 		map = TiledMap.getInstance ();
+		intensity = baseIntensity + pollutionHandler.pollution * pollutionModifier * Random.Range(minFactor, maxFactor);
+		Debug.Log ("NEW TORNADO! Intensity: " + intensity);
 	}
 	
 	// Update is called once per frame
@@ -33,8 +42,8 @@ public class Tornado : MonoBehaviour {
 
 		Vector2 mapCenter = map.topLeftPoint + new Vector2 (map.gameWidth / 2, -map.gameHeight / 2);
 		float distFromCenter = (new Vector2(trans.position.x, trans.position.y) - mapCenter).magnitude;
-		if (distFromCenter > map.gameWidth)
-			GameObject.Destroy (this.gameObject);
+		//if (distFromCenter > map.gameWidth)
+			//GameObject.Destroy (this.gameObject);
 	}
 
 	private void Move() {

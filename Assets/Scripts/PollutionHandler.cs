@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PollutionHandler : MonoBehaviour {
-
+	public static PollutionHandler getInstance() {
+		return GameObject.Find ("Pollution").GetComponent<PollutionHandler> ();
+	}
 	public Text pollutionText;
 	public static float multiplier = 0.0001f;
 
@@ -16,7 +18,7 @@ public class PollutionHandler : MonoBehaviour {
 	}
 
 	public string getPollutionString() {
-		return pollution.ToString ("#0.000");
+		return pollution.ToString ("##########0.000");
 	}
 
 	// Update is called once per frame

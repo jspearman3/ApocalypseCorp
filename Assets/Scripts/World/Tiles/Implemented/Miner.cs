@@ -6,7 +6,7 @@ public class Miner : PowerableStructure, Purchasable, Destructable {
 	public static Sprite Sprite = Resources.Load<Sprite>("Textures/Structures/Miner");
 	public override Sprite sprite { get { return Miner.Sprite;}}
 
-	public int price { get { return 20;}}
+	public int price { get { return 250;}}
 	public override int polutionGenerated { get { return 5;}}
 
 	private float hp = 100f;

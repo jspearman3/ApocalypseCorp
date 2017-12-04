@@ -60,6 +60,7 @@ public class DisasterManager : MonoBehaviour {
 	private void trySpawn() {
 		float pollutionFactor = pollutionHandler.pollution * disasterChanceMultiplier;
 		float odds = baseChance + pollutionFactor;
+		Debug.Log ("odds for tornado: " + odds);
 		if (Random.Range (0f, 1) < odds) {
 			Vector2 spawnPosition = getRandomSpawnPosition();
 			Vector2 mapMiddle = map.topLeftPoint + new Vector2 (map.gameWidth / 2, -map.gameHeight / 2);
